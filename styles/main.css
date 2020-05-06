@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Source+Sans+Pro&family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -9,29 +9,36 @@ html,
 body {
     width: 100%;
     height: auto;
+    display: grid;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 300;
 }
 
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Food-images/lily-banse--YHSwy6uqvk-unsplash.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Food-images/brooke-lark-HlNcigvUi4Q-unsplash.jpg');
     width: 100%;
     background-size: cover, cover;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 100vh;
 }
 
-#hamitems {
+#hamitems,
+#hamitems2 {
     padding-top: 20px;
     font-size: 1.4rem;
     padding-left: 40px;
 }
 
-#hamitems li {
+#hamitems li,
+#hamitems2 li {
     list-style-type: none;
     padding-bottom: 20px;
     border-bottom: 1px ridge rgba(0, 0, 0, 0.171);
 }
 
-#hamitems li a {
+#hamitems li a,
+#hamitems2 li a {
     text-decoration: none;
     color: black;
 }
@@ -40,11 +47,15 @@ header {
     display: none;
 }
 
+#text-color {
+    color: black;
+}
+
 #search-bar {
     background: url('../Food-images/IMG_20200418_091029.jpg');
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 10%;
+    background-size: 30px;
     display: flex;
     color: black;
     margin-top: 50px;
@@ -56,12 +67,14 @@ header {
     margin-left: 20px;
 }
 
-#hamitems a {
+#hamitems a,
+#hamitems2 a {
     box-sizing: border-box;
     display: block;
 }
 
-#hamitems li:hover {
+#hamitems li:hover,
+#hamitems2 li:hover {
     font-size: 1.6rem;
 }
 
@@ -75,6 +88,7 @@ header {
     color: #51ff12;
     font-size: 2rem;
     cursor: pointer;
+    padding-left: 10px;
 }
 
 #nav-bar input:checked~#hamitems-div {
@@ -90,9 +104,17 @@ header {
     height: 100vh;
 }
 
+#logo {
+    width: 150px;
+    height: 40px;
+}
+
 #company-name {
     color: #51ff12;
     font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
     animation-name: name;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -100,19 +122,29 @@ header {
 
 @keyframes name {
     0% {
-        transform: translateY(-500%);
+        transform: translateY(-800%);
     }
     100% {
-        transform: translateY(-6%);
+        transform: translateY(-3%);
     }
 }
 
 #motto {
     color: white;
     font-size: 1.4rem;
-    animation-name: name;
+    font-family: 'Playfair Display', serif;
+    animation-name: name2;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+}
+
+@keyframes name2 {
+    0% {
+        transform: translateY(-1500%);
+    }
+    100% {
+        transform: translateY(-1%);
+    }
 }
 
 #header {
@@ -158,6 +190,7 @@ header {
 }
 
 main {
+    width: 100%;
     animation-name: main;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -204,7 +237,6 @@ main {
     align-items: center;
     width: 100%;
     padding-top: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .food-price {
@@ -221,7 +253,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Source Serif Pro', serif;
+    line-height: 1.5;
 }
 
 .price-color {
@@ -357,7 +389,6 @@ main {
     bottom: 30px;
     margin-left: 60px;
     text-align: center;
-    padding-top: 10px;
     border: 1px hidden black;
     border-radius: 7px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
@@ -381,10 +412,6 @@ main {
     border-left: none;
 }
 
-.fill-box:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
-}
-
 #pwd2 {
     margin-bottom: 10px;
 }
@@ -396,11 +423,6 @@ main {
 #checkbox {
     margin-top: 10px;
     margin-right: 5px;
-}
-
-.alt {
-    font-size: 1.2rem;
-    padding-top: 30px;
 }
 
 .final-submit {
@@ -444,6 +466,7 @@ footer {
 
 footer p {
     padding-bottom: 10px;
+    line-height: 1.5;
 }
 
 footer i {
@@ -456,9 +479,12 @@ footer i {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    line-height: 1.5;
 }
 
 .alt {
+    font-size: 1.2rem;
+    padding-top: 30px;
     width: 100%;
     text-align: center;
     margin-bottom: 25px;
@@ -466,7 +492,7 @@ footer i {
 
 .alt-checkin {
     margin: auto;
-    margin-bottom: 9px;
+    margin-bottom: 11px;
     display: block;
     width: 300px;
     border: 1px hidden black;
@@ -517,9 +543,198 @@ footer i {
     margin-top: 20px;
     text-align: center;
     width: 100%;
+    padding-bottom: 50px;
 }
 
 .already-mem a {
     text-decoration: none;
     color: black;
+}
+
+.check-line {
+    line-height: 1.5;
+}
+
+
+/* For large screens */
+
+@media(min-width: 768px) {
+    #company-name {
+        font-size: 6.1rem;
+    }
+    #motto {
+        font-size: 2.7rem;
+    }
+    .buttons-2 button {
+        height: 40px;
+        width: 150px;
+        border: 1px hidden black;
+        border-radius: 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        outline: none;
+    }
+    .food-pics,
+    .tutorials {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    #search-bar {
+        background: url('../Food-images/IMG_20200418_091029.jpg');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 5%;
+        display: flex;
+        color: black;
+        margin-top: 50px;
+        width: 90%;
+        height: 35px;
+        border-radius: 20px;
+        border: 1px ridge rgba(0, 0, 0, 0.342);
+        text-indent: 35px;
+        margin-left: 20px;
+    }
+    .alt-checkin {
+        margin: auto;
+        margin-bottom: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        border-radius: 25px;
+        height: 40px;
+        padding-top: 0;
+    }
+    .account {
+        width: 40%;
+        margin: auto;
+        margin-top: 60px;
+    }
+    .join-us {
+        width: 150px;
+        height: 60px;
+        padding-top: 2.5%;
+    }
+    .fill-box {
+        width: 90%;
+    }
+    .final-submit {
+        width: 45%;
+        font-size: 1.3rem;
+        margin-top: 40px;
+        margin-left: 25%;
+    }
+    .login-header {
+        margin-top: 200px;
+        line-height: 1.6;
+    }
+    .login-header h2 {
+        font-size: 2.3rem;
+    }
+    .login-header p {
+        font-size: 1.3rem;
+    }
+}
+
+@media(min-width: 1000px) {
+    .food-pics,
+    .tutorials {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    #search-bar {
+        background: url('../Food-images/IMG_20200418_091029.jpg');
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 40px;
+        display: flex;
+        color: black;
+        width: 40%;
+        height: 35px;
+        border-radius: 20px;
+        border: 1px ridge rgba(0, 0, 0, 0.342);
+        text-indent: 35px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    #nav-bar label {
+        display: none;
+    }
+    #hamitems-div {
+        position: static;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        background: none;
+        width: 100%;
+        height: auto;
+    }
+    #hamitems,
+    #hamitems2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background: none;
+        width: 100%;
+        height: auto;
+        padding-right: 20px;
+    }
+    #hamitems li,
+    #hamitems2 li {
+        list-style-type: none;
+        padding-bottom: 20px;
+        border-bottom: none;
+    }
+    #hamitems li a {
+        color: white;
+    }
+    .display-none {
+        display: none;
+    }
+}
+
+@media(min-width: 1236px) {
+    .food-pics,
+    .tutorials {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .join {
+        width: 100px;
+        font-size: 1.2rem;
+    }
+}
+
+@media(min-width: 1440px) {
+    .food-pics,
+    .tutorials {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .join {
+        width: 130px;
+        font-size: 1.3rem;
+    }
+    .image2 {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+    .ask-login-div {
+        background-position: center;
+        height: 450px;
+        width: 100%;
+    }
+    .buttons {
+        margin-top: 360px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+    .login {
+        background: #51ff12;
+        margin-right: 50px;
+    }
 }
