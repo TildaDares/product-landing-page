@@ -634,6 +634,10 @@ footer i {
     .login-header p {
         font-size: 1.3rem;
     }
+    footer {
+        height: 500px;
+        padding-top: 80px;
+    }
 }
 
 @media(min-width: 1000px) {
