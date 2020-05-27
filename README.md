@@ -1,2 +1,3 @@
-# product-landing-page
-The freecodecamp landing page project
+# Product Landing Page
+[Link to site](https://tildadares.github.io/product-landing-page/index.html
+)
